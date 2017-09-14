@@ -40,6 +40,7 @@ gem 'jquery-turbolinks'
 gem 'simple_form'
 gem 'mail_form'
 gem 'bootstrap', '~> 4.0.0.beta'
+gem 'sendgrid-ruby'
 
 
 group :development, :test do
