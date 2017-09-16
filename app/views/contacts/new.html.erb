@@ -1,5 +1,6 @@
 <h1 id="page_title">Contact</h1>
 	<div class="container">
+		<%= image_tag google_map(center: location.address) %>
 		<%= simple_form_for @contact, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
 			<%= f.error_notification %>
 			<%= f.input :name, required: true %>
