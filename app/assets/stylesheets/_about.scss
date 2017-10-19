@@ -1,0 +1,32 @@
+.main-image {
+  background: url('learning.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 25% 25%;
+  @include flex_center;
+  flex-direction: column;
+  overflow-y: visible;
+  h5, p {
+      color: $white;
+      font-weight: bold;
+    }
+    ul {
+      padding-left: 2em;
+      li {
+        color: crimson;
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .main-image {
+      height: 100vh;
+      background-position: 0px 0px, center;
+    }
+      ul {
+        padding: 0;
+      }
+  }

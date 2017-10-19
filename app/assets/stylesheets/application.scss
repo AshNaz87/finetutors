@@ -1,24 +1,108 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- @import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Istok+Web|Handlee');
+@import 'bootstrap';
+@import 'font-awesome';
+@import 'variables';
+@import 'typography';
+@import 'mixins';
+@import 'navbar';
+@import 'footer';
+@import 'main';
+@import 'programmes';
+@import 'about';
+@import 'contact';
 
-.form-control, .form-group { 
-	width: 550px;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+h2 {
+  font-family: $primary-font;
+  color: $peach;
+  text-align: center;
+  span {
+    border: 2px solid $yellow;
+    border-radius: 5px;
+    background-color: $tuscan;
+  }
+}
+
+.page-title {
+  height: 75px;
+  width: 100%;
+  position: relative;
+  h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    span {
+      padding: 0 10px;
+    }
+  }
+}
+
+h3, h4 {
+  font-family: $secondary-font;
+  color: $light-green;
+  text-align: center;
+}
+
+h5, p {
+  font-family: $secondary-font;
+  text-align: center;
+}
+
+h5 {
+  color: $black;
+}
+
+img {
+  border-radius: 5px;
+  background-position: center;
+}
+
+.wrapper {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  @include flex_center;
+  flex-direction: column;
 }
 
 .hidden {
 	display: none;
+}
+
+.mobile-active {
+  display: none;
+}
+
+.container-fluid {
+  position: relative;
+}
+
+.row {
+  justify-content: center;
+}
+
+.bg-main {
+  background: #F0F2F0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.margin-top {
+  margin: 15px !important;
 }

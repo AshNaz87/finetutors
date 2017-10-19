@@ -1,0 +1,114 @@
+.wrapper-centered {
+  @include flex_center;
+  flex-direction: column;
+  margin: 15px 25px;
+}
+
+.motto {
+  font-family: $primary-font;
+  color: $black;
+  span {
+    text-decoration: underline;
+    color: crimson;
+  }
+}
+
+.opening-statement {
+  color: silver;
+}
+
+.ofsted-wrapper {
+  @include flex_center; 
+  img.ofsted {
+    border: 3px solid $dark-orange;
+    border-radius: 3px;
+  }
+}  
+
+.slider {
+  margin: 15px 0;
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
+  border: 3px solid $purple;
+  border-radius: 3px;
+  .slides {
+    background-color: $white;;
+    display: block;
+    height: 200px;
+    width: 2500px;
+    margin: 0;
+    padding: 0;
+    .slide {
+      list-style-type: none;
+      height: 200px;
+      width: 300px;
+      float: left;
+      @include flex_center;
+    }
+  }
+}
+
+.reading {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card {
+  margin: 15px;
+  .card-body {
+    @include flex_center;
+    flex-direction: column;
+    .title {
+      font-family: $primary-font;
+      color: $tuscan;
+    }
+    .description {
+      color: $white;
+    }
+  }
+}
+
+.bg-top {
+  background-color: $green;
+}
+
+.bg-middle {
+  background-color: midnightblue;
+}
+
+.bg-bottom {
+  background-color: $electric-blue;
+}
+
+.bg-1 {
+  background-color: $faint-purple;
+}
+
+.bg-2 {
+    background-color: $purple;
+}
+
+.bg-3 {
+  background-color: $dark-blue;
+}
+
+.margin-none {
+  margin: 0;
+}
+
+.quote {
+  color: $white;
+}
+
+
+
+
+
+
+
+
+
+
+
+

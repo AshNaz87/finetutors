@@ -1,16 +1,76 @@
-<h1 id="page_title">Contact</h1>
-	<div class="container">
-		<%= image_tag google_map(center: location.address) %>
-		<%= simple_form_for @contact, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
-			<%= f.error_notification %>
-			<%= f.input :name, required: true %>
-			<%= f.input :email, placeholder: 'you@example.com', required: true %>
-			<%= f.input :subject, collection: [:Curriculum, :Jobs, :Other], prompt: 'Subject', required: true, error: 'You must select one' %>
-			<%= f.input :message, as: :text, required: true, input_html: { rows: 6 } %>
-			<div class="hidden">
-				<%= f.input :nickname, hint: 'leave this field blank' %>	
-			</div>
-			<%= f.button :submit, 'Send Message', class: 'btn btn-primary' %>
-		<% end %>
-	</div>
+<% provide(:title, "Contact") %>
+<div class="row bg-main">
+  <div class="col-xs-12">
+    <div class="page-title">
+    <h2><span>Contact</span></h2>
+    </div>  
+  </div>
+</div>
+<div class="wrapper">
+  <h5 class="main-text">Our Head Office is located on 42 Phoenix Road, Euston, NW1 1TA and is within 5 minutes walking distance from Euston station.</h5>
+  <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=Ossulston+Street,London&zoom=15&size=500x400&markers=color:red%7C51.530991,-0.131455&key=AIzaSyAyYZyJ0eR2QdOEK5SgK2WU9uEtPKMj21M", alt: "Head Office", class: "large_map" %>
+  <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=Ossulston+Street,London&zoom=15&size=250x200&markers=color:red%7C51.530991,-0.131455&key=AIzaSyAyYZyJ0eR2QdOEK5SgK2WU9uEtPKMj21M", alt: "Head Office", class: "small_map" %>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <h5>Our term-time opening hours are:</h5>
+    <table>
+      <tr>
+        <th><h5>Day</h5></th>
+        <th><h5>Opening Times</h5></th>
+      </tr>
+      <tr>
+        <td><h6>Monday</h6></td>
+        <td><h6>17:00 - 21:00 (Girl's Day)</h6></td>
+      </tr>
+      <tr>
+        <td><h6>Tuesday</h6></td>
+        <td><h6>17:00 - 21:00</h6></td>
+      </tr>
+      <tr>
+        <td><h6>Wednesday</h6></td>
+        <td><h6>17:00 - 21:00</h6></td>
+      </tr>
+      <tr>
+        <td><h6>Thursday</h6></td>
+        <td><h6>17:00 - 21:00</h6></td>
+      </tr>
+      <tr>
+        <td><h6>Friday</h6></td>
+        <td><h6>Closed</h6></td>
+      </tr>
+      <tr>
+        <td><h6>Saturday</h6></td>
+        <td><h6>09:00 - 18:30</h6></td>
+      </tr>
+      <tr>
+        <td><h6>Sunday</h6></td>
+        <td><h6>09:00 - 18:30</h6></td>
+      </tr>
+    </table>
+          </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="tel-info">
+        <a href="tel:020 7383 4056"><span class="fa fa-phone fa-2x" aria-hidden="true"></span></a>
+        <h5 class="main-text">If you have any queries, you may also contact us on:<br>020 7383 4056</h5>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="form-wrapper">
+  <h3>Send us a Message</h3>
+  <%= simple_form_for new_contact_path, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :name, required: true %>
+    <%= f.input :email, placeholder: 'you@example.com', required: true %>
+    <%= f.input :subject, collection: [:Curriculum, :Jobs, :General], prompt: 'Subject', required: true, error: 'You must select one' %>
+    <%= f.input :message, as: :text, required: true, input_html: { rows: 8 } %>
+    <div class="hidden">
+    	<%= f.input :nickname, hint: 'Leave this field blank' %>	
+    </div>
+    <%= f.button :submit, 'Send Message', class: 'btn btn-primary' %>
+  <% end %>
+  <h5 class="form-message">All fields marked with (<span>*</span>) must be filled in</h5>
+</div>
 

@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-source "https://rubygems.org"
 ruby "2.3.4"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
@@ -39,10 +38,12 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'jquery-turbolinks'
 gem 'simple_form'
 gem 'mail_form'
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'autoprefixer-rails', '~> 7.1', '>= 7.1.4'
 gem 'sendgrid-ruby'
-gem 'geocoder'
-
+gem 'bootstrap', '~> 4.0.0.beta'
+gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
+gem 'execjs', '~> 2.7'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

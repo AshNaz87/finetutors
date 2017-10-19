@@ -1,0 +1,26 @@
+.content {
+  width: 100%;
+}
+
+.center {
+  @include flex_center;
+}
+
+.eleven {
+  border: 2px solid $blue;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.heading {
+  font-family: $primary-font;
+}
+
+.space-even {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.fa-info{
+  color: $blue;
+}
