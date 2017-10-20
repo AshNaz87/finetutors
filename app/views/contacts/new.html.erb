@@ -60,10 +60,10 @@
 <hr>
 <div class="form-wrapper">
   <h3>Send us a Message</h3>
-  <%= simple_form_for new_contact_path, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
+  <%= simple_form_for @contact, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
     <%= f.error_notification %>
-    <%= f.input :name, required: true %>
-    <%= f.input :email, placeholder: 'you@example.com', required: true %>
+    <%= f.input :name, required: true, error: "Please provide a name" %>
+    <%= f.input :email, placeholder: 'you@example.com', required: true, error: "You must provide a valid email address" %>
     <%= f.input :subject, collection: [:Curriculum, :Jobs, :General], prompt: 'Subject', required: true, error: 'You must select one' %>
     <%= f.input :message, as: :text, required: true, input_html: { rows: 8 } %>
     <div class="hidden">

@@ -6,7 +6,7 @@ class Contact < MailForm::Base
 	attribute :message,  validate: true
 	attribute :nickname, captcha: true
 
-	def headers
+	def headers 
 		{
 			subject: "Contact Form",
 			to: "ashraf.caspian@gmail.com",
