@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
 		@contact = Contact.new(contact_params)
 		@contact.request = request
 		if @contact.deliver
-			flash.now[:notice] = "Your message has been successfully sent"
+			flash.now[:notice] = nil
 		else
 			flash.now[:error] = "Cannot send message."
 			render 'new'
