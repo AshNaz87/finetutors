@@ -19,10 +19,6 @@
 
 .ofsted-wrapper {
   @include flex_center; 
-  img.ofsted {
-    border: 3px solid $dark-orange;
-    border-radius: 3px;
-  }
 }  
 
 .slider {
