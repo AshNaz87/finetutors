@@ -1,7 +1,3 @@
-img.large_map { 
-  display: none;
-}
-
 .wrapper-details {
   width: 100%;
   height: auto;
@@ -104,12 +100,6 @@ abbr[title] {
     }
   }
 
-  img.small_map {
-    display: none;
-  }
-  img.large_map {
-    display: block;
-  }
   .form-wrapper {
     @include flex_center;
     flex-direction: column;
